@@ -7,9 +7,14 @@ table.
 <hr>
 
 ### Days 1-14: Introduction to Swift
-> ✔️ 2023/09/13 → 2023/10/04
+> ✔️ 2023/09/13 → 2023/09/30
 
 * Swift 기본 문법
+
+### Day 15: Consolidation I
+> ✔️ 2023/10/03 → 2023/10/04
+
+* 지금까지 배운 Swift 문법 복습하기
 
 <hr>
 
@@ -18,6 +23,11 @@ table.
 
 * Guess the Flag
 * WeSplit
+
+### Day 25: Consolidation II
+> ✔️ 2023/10/19
+
+* BrainTrainingRPS
 
 <hr>
 
