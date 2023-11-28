@@ -32,6 +32,6 @@ table.
 <hr>
 
 ### Days 26-34: Expanding your skills
-> 2023/10/29 → ing
+> 🏃🏻‍♀️ 2023/10/29 → ing
 
 * BetterRest
