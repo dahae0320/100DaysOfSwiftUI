@@ -11,7 +11,7 @@
 		681842A82B17238B0027FD27 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681842A72B17238B0027FD27 /* ContentView.swift */; };
 		681842AA2B17238C0027FD27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 681842A92B17238C0027FD27 /* Assets.xcassets */; };
 		681842AD2B17238C0027FD27 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 681842AC2B17238C0027FD27 /* Preview Assets.xcassets */; };
-		681842B42B1723BA0027FD27 /* start in Resources */ = {isa = PBXBuildFile; fileRef = 681842B32B1723BA0027FD27 /* start */; };
+		686822F22B18B84600566994 /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = 686822F12B18B84600566994 /* start.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +20,7 @@
 		681842A72B17238B0027FD27 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		681842A92B17238C0027FD27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		681842AC2B17238C0027FD27 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		681842B32B1723BA0027FD27 /* start */ = {isa = PBXFileReference; lastKnownFileType = text; path = start; sourceTree = "<group>"; };
+		686822F12B18B84600566994 /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +55,8 @@
 			children = (
 				681842A52B17238B0027FD27 /* WordScrambleApp.swift */,
 				681842A72B17238B0027FD27 /* ContentView.swift */,
+				686822F12B18B84600566994 /* start.txt */,
 				681842A92B17238C0027FD27 /* Assets.xcassets */,
-				681842B32B1723BA0027FD27 /* start */,
 				681842AB2B17238C0027FD27 /* Preview Content */,
 			);
 			path = WordScramble;
@@ -128,8 +128,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				681842B42B1723BA0027FD27 /* start in Resources */,
 				681842AD2B17238C0027FD27 /* Preview Assets.xcassets in Resources */,
+				686822F22B18B84600566994 /* start.txt in Resources */,
 				681842AA2B17238C0027FD27 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
