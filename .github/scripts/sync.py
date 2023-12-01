@@ -1,4 +1,3 @@
-from notion_client import Client
 import requests
 import os
 
@@ -9,20 +8,19 @@ REPO_OWNER = '${{ vars.REPO_OWNER }}'
 REPO_NAME = '${{ vars.REPO_NAME }}'
 REPO_README_PATH = '${{ vars.REPO_README_PATH }}'
 
-# Notion API 호출을 위한 클라이언트 생성
-notion_client = Client(auth=NOTION_API_TOKEN)
+# Notion API 호출을 위한 헤더 설정
+notion_headers = {
+    'Authorization': f'Bearer {NOTION_API_TOKEN}',
+    'Content-Type': 'application/json',
+    'Notion-Version': '2023-08-01',  # 현재 Notion API 버전
+}
 
+# Notion 페이지의 내용을 가져오는 함수
 def get_notion_content():
-    # Notion 페이지의 내용을 가져오기
-    page = notion_client.get_block(NOTION_PAGE_ID)
-
-    # 페이지의 텍스트 블록들을 Markdown으로 변환
-    markdown_content = ''
-    for block in page.children:
-        if block.type == 'text':
-            markdown_content += f'{block.title}\n'
-
-    return markdown_content
+    notion_url = f'https://api.notion.com/v1/pages/{NOTION_PAGE_ID}'
+    response = requests.get(notion_url, headers=notion_headers)
+    data = response.json()
+    return data['properties']['title']['title'][0]['text']['content']  # 예제에서는 제목만 가져
 
 # GitHub API 호출을 위한 헤더 설정
 github_headers = {
