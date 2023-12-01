@@ -20,7 +20,7 @@ def get_notion_content():
     notion_url = f'https://api.notion.com/v1/pages/{NOTION_PAGE_ID}'
     response = requests.get(notion_url, headers=notion_headers)
     data = response.json()
-    return data['properties']['title']['title'][0]['text']['content']  # 예제에서는 제목만 가져
+    return data
 
 # GitHub API 호출을 위한 헤더 설정
 github_headers = {
