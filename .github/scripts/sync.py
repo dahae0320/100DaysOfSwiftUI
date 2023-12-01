@@ -4,7 +4,7 @@ import os
 NOTION_API_TOKEN = os.getenv('NOTION_API_TOKEN')
 GITHUB_API_TOKEN = os.getenv('GITHUB_API_TOKEN')
 NOTION_PAGE_ID = os.getenv('NOTION_PAGE_ID')
-REPO_OWNER = os.getenv('REPO_OWNE')
+REPO_OWNER = os.getenv('REPO_OWNER')
 REPO_NAME = os.getenv('REPO_NAME')
 REPO_README_PATH = os.getenv('REPO_README_PATH')
 
