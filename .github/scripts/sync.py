@@ -6,7 +6,7 @@ GITHUB_API_TOKEN = os.getenv('GITHUB_API_TOKEN')
 NOTION_PAGE_ID = os.getenv('NOTION_PAGE_ID')
 REPO_OWNER = os.getenv('REPO_OWNER')
 REPO_NAME = os.getenv('REPO_NAME')
-REPO_README_PATH = os.getenv('REPO_README_PATH')
+REPO_README_PATH = os.getenv('REPO_README_PATH') 
 
 # Notion API 호출을 위한 헤더 설정
 notion_headers = {
