@@ -47,7 +47,7 @@ def update_github_readme(content):
         'sha': current_sha,  # 동적으로 가져온 sha 값 사용
     }
     # GitHub API를 사용하여 README 파일 업데이트
-    response = requests.post(github_url, headers=github_headers, data=readme_content)
+    response = requests.put(github_url, headers=github_headers, data=readme_content)
     response.raise_for_status()
     return response.status_code
 
