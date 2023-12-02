@@ -18,7 +18,7 @@ notion_headers = {
 
 # Notion 페이지의 내용을 가져오는 함수
 def get_notion_content():
-    notion_url = f'https://api.notion.com/v1/pages/{NOTION_PAGE_ID}'
+    notion_url = f'https://api.notion.com/v1/blocks/{NOTION_PAGE_ID}/children?page_size=100'
     response = requests.get(notion_url, headers=notion_headers)
     data = response.json()
     return data['results'][0]['paragraph']['rich_text']['text']['content']
