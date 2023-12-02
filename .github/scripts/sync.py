@@ -21,7 +21,7 @@ def get_notion_content():
     notion_url = f'https://api.notion.com/v1/blocks/{NOTION_PAGE_ID}/children?page_size=100'
     response = requests.get(notion_url, headers=notion_headers)
     data = response.json()
-    return data['results'][0]['paragraph']['rich_text']['text']['content']
+    return data['results'][0]['paragraph']['rich_text'][0]['text']['content']
 
 # GitHub API 호출을 위한 헤더 설정
 github_headers = {
