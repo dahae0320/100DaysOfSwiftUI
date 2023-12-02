@@ -1,5 +1,6 @@
 import requests
 import os
+import base64
 
 NOTION_API_TOKEN = os.getenv('NOTION_API_TOKEN')
 GITHUB_API_TOKEN = os.getenv('GITHUB_API_TOKEN')
@@ -12,7 +13,7 @@ REPO_README_PATH = os.getenv('REPO_README_PATH')
 notion_headers = {
     'Authorization': f'Bearer {NOTION_API_TOKEN}',
     'Content-Type': 'application/json',
-    'Notion-Version': '2023-08-01',  # 현재 Notion API 버전
+    'Notion-Version': '2022-06-28',  # 최신 Notion API 버전 (23/12/2 기준)
 }
 
 # Notion 페이지의 내용을 가져오는 함수
@@ -20,7 +21,7 @@ def get_notion_content():
     notion_url = f'https://api.notion.com/v1/pages/{NOTION_PAGE_ID}'
     response = requests.get(notion_url, headers=notion_headers)
     data = response.json()
-    return data
+    return data['results'][0]['paragraph']['rich_text']['text']['content']
 
 # GitHub API 호출을 위한 헤더 설정
 github_headers = {
@@ -41,13 +42,14 @@ def update_github_readme(content):
     current_sha = readme_info['sha']
 
     # GitHub README를 업데이트하는 함수
-    readme_content = {
+    body = {
         'message': '[Sync] Update README from Notion',
-        'content': content,
+        'content': base64.b64encode(content.encode('UTF-8')).decode('UTF-8'),
         'sha': current_sha,  # 동적으로 가져온 sha 값 사용
     }
+
     # GitHub API를 사용하여 README 파일 업데이트
-    response = requests.put(github_url, headers=github_headers, data=readme_content)
+    response = requests.put(github_url, headers=github_headers, json=body)
     response.raise_for_status()
     return response.status_code
 
