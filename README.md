@@ -36,3 +36,4 @@ table.
 
 * BetterRest
 * WordScramble
+* Animations
