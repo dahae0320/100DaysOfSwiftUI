@@ -2,7 +2,7 @@ name: Sync Notion to GitHub
 
 on:
   schedule:
-    - cron: '50 23 * * *'  # 매일 23:50에 실행
+    - cron: '50 14 * * *'  # 매일 23:50에 실행(kst to utc), 현재 github action에서 timezone 기능 지원 안됌
 # on:
 #   push:
 #     branches:
